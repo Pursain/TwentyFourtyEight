@@ -43,6 +43,7 @@ public class SquareViewHolder extends RecyclerView.ViewHolder{
         //given a value, give a display
         cardView.setCardBackgroundColor(colorMap.get(value));
         textView_num.setText(value!=0 ? String.valueOf(value) : "");
+
     }
 
 }

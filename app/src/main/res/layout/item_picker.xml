@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/__2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_maxValue"
+        app:layout_constraintEnd_toEndOf="@+id/rv_maxValue"
+        app:layout_constraintStart_toStartOf="@+id/rv_maxValue"
+        app:layout_constraintTop_toTopOf="@+id/rv_maxValue" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Max Value"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/rv_maxValue"
+        app:layout_constraintStart_toStartOf="@+id/rv_maxValue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_maxValue"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+</android.support.constraint.ConstraintLayout>

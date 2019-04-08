@@ -1,5 +1,6 @@
 package com.example.huanghg.twentyfourtyeight;
 
+import android.content.Intent;
 import android.graphics.Rect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,21 +18,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView recyclerView;
     private GridAdapter gridAdapter;
     private int gameSize = 4;
+    private boolean endlessMode = false;
+    private int maxValue = 2048;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = getIntent();
+        if (intent != null){
+            this.endlessMode = intent.getBooleanExtra("endlessMode", false);
+            this.gameSize = intent.getIntExtra("dimensions", 4);
+            this.maxValue = intent.getIntExtra("maxValue", 2048);
+        }
+
         testOutput = findViewById(R.id.tv_board);
-
         recyclerView = findViewById(R.id.rv_board);
-
         reset();
-
-
-
-
     }
 
     private void reset(){
